@@ -57,6 +57,12 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < 800; i++) {
         const box = document.createElement('div');
         box.classList.add('square');
+        box.addEventListener('mouseover', () => {
+            box.style.backgroundColor = 'rgb(255, 0, 0)'; // Change color on hover
+        });
+        box.addEventListener('mouseout', () => {
+            box.style.backgroundColor = 'rgb(29, 29, 29)'; // Change color back when not hovering
+        });
         container.appendChild(box);
     }
 });
